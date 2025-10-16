@@ -97,6 +97,7 @@ jobs:
           path: 'firmware/${{ steps.branch-name.outputs.branch }}/*'
 
   notify:
+    if: false
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -105,4 +106,4 @@ jobs:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           title: Completed
           message: Completed
-        if: ${{ always() }}
+        if: false

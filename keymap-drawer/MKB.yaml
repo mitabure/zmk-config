@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: MKB}
 layers:
   Def:
-  - ESC
+  - TAB
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - BKSP
-  - TAB
+  - {t: ESC, h: BT}
   - A
   - S
   - D
@@ -23,8 +23,8 @@ layers:
   - J
   - K
   - L
-  - Sft+SEMI
-  - Sft+SQT
+  - SEMI
+  - SQT
   - LSHFT
   - Z
   - X
@@ -35,18 +35,18 @@ layers:
   - M
   - COMMA
   - DOT
-  - SLASH
-  - BSLH
-  - '&mt LCTL'
+  - UP
+  - FSLH
+  - {t: ESC, h: LCTL}
   - LGUI
   - LALT
   - {t: SPACE, h: Num}
   - {t: SPACE, h: Fnc}
   - {t: SPACE, h: Fnc}
   - {t: SPACE, h: Num}
-  - MINUS
-  - EQUAL
-  - INT3
+  - LEFT
+  - DOWN
+  - RIGHT
   - LEFT
   - UP
   - SPACE
@@ -308,7 +308,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

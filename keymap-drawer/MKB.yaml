@@ -36,7 +36,7 @@ layers:
   - COMMA
   - DOT
   - SLASH
-  - BACKSLASH
+  - '0x31'
   - LCTRL
   - LGUI
   - LALT
@@ -177,25 +177,84 @@ layers:
   - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Mouse:
-  - {t: ▽, type: trans}
+  Func:
+  - ''
+  - ''
+  - Sft+Ctl+TAB
+  - ''
+  - Ctl+TAB
+  - PSCRN
   - F1
   - F2
   - F3
   - F4
   - F5
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - TAB
+  - ''
+  - ''
+  - UP
+  - ''
+  - MUTE
   - F6
   - F7
   - F8
   - F9
   - F10
+  - ''
+  - LSHFT
+  - ''
+  - LEFT
+  - DOWN
+  - RIGHT
+  - ''
+  - F11
+  - {t: F12, type: held}
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - LCTRL
+  - LGUI
+  - LALT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - LEFT
+  - UP
+  - SPACE
+  - DOWN
+  - RIGHT
+  - HOME
+  - PG UP
+  - ENTER
+  - PG DN
+  - END
+  - A
+  - B
+  Mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB4'
@@ -206,11 +265,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F11
-  - F12
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: '&mkp MB1', type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB1'
   - '&mkp MB3'
   - '&mkp MB2'
   - {t: ▽, type: trans}
@@ -357,19 +416,19 @@ layers:
 combos:
 - p: [9, 10]
   k: LEFT BRACKET
-  l: [Def, Sym, Num]
+  l: [Def, Num, Sym]
 - p: [10, 11]
   k: DELETE
   l: [Def, Num, Sym]
 - p: [40, 41]
   k: BT
-  l: [Def, Sym, Num, Mouse, Scr]
+  l: [Def]
 - p: [21, 22]
   k: Scr
-  l: [Def, Num, Sym, Mouse]
+  l: [Def, Num, Sym, Func, Mouse]
 - p: [31, 32]
-  k: Mouse
-  l: [Def, Num, Sym, Scr]
+  k: Func
+  l: [Def, Num, Sym, Mouse, Scr]
 - p: [27, 28]
-  k: Mouse
-  l: [Def, Num, Sym, Scr]
+  k: Func
+  l: [Def, Num, Sym, Mouse, Scr]

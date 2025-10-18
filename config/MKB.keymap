@@ -7,11 +7,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
-#define FUNC 1
-#define NUM 2
-#define MOUSE 3
-#define SCROLL 4
-#define BT 5
+#define NUM 1
+#define SYM 2
+#define FUNC 3
+#define MOUSE 4
+#define SCROLL 5
+#define BT 6
 
 &mt {
     flavor = "balanced";
@@ -27,7 +28,7 @@
         CMB_AT_CARET {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <9 10>;
-            layers = <0 2 1>;
+            layers = <0 1 2>;
         };
 
         CMB_DELETE {
@@ -37,27 +38,27 @@
         };
 
         CMB_MO_BT_LAYER {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <40 41>;
-            layers = <0 2 1 3 4>;
+            layers = <0>;
         };
 
         CMB_MO_SCR_LAYER {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <21 22>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 4>;
         };
 
-        CMB_MO_MOUSE_LAYER_R {
+        CMB_MO_FUNC_LAYER_R {
             bindings = <&mo 3>;
             key-positions = <31 32>;
-            layers = <0 1 2 4>;
+            layers = <0 1 2 4 5>;
         };
 
-        CMB_MO_MOUSE_LAYER_L {
+        CMB_MO_FUNC_LAYER_L {
             bindings = <&mo 3>;
             key-positions = <27 28>;
-            layers = <0 1 2 4>;
+            layers = <0 1 2 4 5>;
         };
     };
 
@@ -69,13 +70,13 @@
             bindings = <
 &kp ESCAPE  &kp Q     &kp W      &kp E     &kp R        &kp T            &kp Y        &kp U             &kp I      &kp O      &kp P      &kp BACKSPACE
 &kp TAB     &kp A     &kp S      &kp D     &kp F        &kp G            &kp H        &kp J             &kp K      &kp L      &kp SEMI   &kp SINGLE_QUOTE
-&kp LSHFT   &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M             &kp COMMA  &kp DOT    &kp SLASH  &kp BACKSLASH
+&kp LSHFT   &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M             &kp COMMA  &kp DOT    &kp SLASH  &kp 0x31
 &kp LCTRL   &kp LGUI  &kp LALT             &lt 1 LANG2  &lt 2 SPACE      &lt 2 ENTER  &lt 1 LANGUAGE_1             &kp MINUS  &kp EQUAL  &kp 0x89
 &kp LEFT    &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                  &kp HOME          &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                                  &kp A                                                                  &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP>, <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         num_layer {
@@ -89,12 +90,11 @@
                                               &kp A                                                                   &kp B
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp PAGE_DOWN PG_UP>,
-                <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         symbol_layer {
+            label = "Sym";
             bindings = <
 &trans    &trans        &trans                &trans           &trans     &trans      &trans     &trans     &trans     &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp BACKSPACE
 &trans    &trans        &trans                &trans           &trans     &trans      &kp MINUS  &kp UNDER  &kp EQUAL  &kp PLUS          &kp 0x89        &kp LS(0x89)
@@ -104,22 +104,35 @@
                                               &trans                                                        &trans
             >;
 
-            label = "Sym";
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>, <&inc_dec_kp PG_UP PG_DN>;
+        };
+
+        function_layer {
+            label = "Func";
+            bindings = <
+&none        &none         &kp LS(LC(TAB))  &none         &kp LC(TAB)  &kp PSCRN       &kp F1    &kp F2     &kp F3      &kp F4      &kp F5      &none
+&kp TAB      &none         &none            &kp UP        &none        &kp K_MUTE      &kp F6    &kp F7     &kp F8      &kp F9      &kp F10     &none
+&kp LSHFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &kp F11   &kp F12    &none       &none       &none       &none
+&kp LCTRL    &kp LGUI      &kp LALT                       &trans       &trans          &trans    &trans                 &none       &none       &none
+&kp LEFT     &kp UP        &kp SPACE        &kp DOWN      &kp RIGHT                              &kp HOME   &kp PG_UP   &kp ENTER   &kp PG_DN   &kp END
+                                            &kp A                                                           &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5       &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &kp F6  &kp F7     &kp F8    &kp F9     &kp F10      &trans  &trans    &mkp MB4   &mkp MB5   &trans     &trans
-&trans    &trans  &trans     &trans    &kp F11    &kp F12      &trans  &trans    &mkp MB1   &mkp MB3   &mkp MB2   &trans
+&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB4   &mkp MB5   &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB1   &mkp MB3   &mkp MB2   &trans
 &trans    &trans  &trans               &trans     &trans       &trans  &trans               &trans     &trans     &trans
 &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                       &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                              &kp A                                               &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP>, <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         scroll_layer {

@@ -5,6 +5,10 @@
 #include "MKB_pinctrl_L.dtsi"
 #include "MKB.dtsi"
 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
+
 / {
     chosen {
         zephyr,display = &oled;
@@ -41,10 +45,6 @@
             compatible = "zmk,input-split";
             reg = <2>;
         };
-    };
-
-    &zip_temp_layer {
-        require-prior-idle-ms = <200>;
     };
 
     trackball_listener: trackball_listener {

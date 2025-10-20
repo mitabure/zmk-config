@@ -62,6 +62,16 @@
             layers = <0 1 2 4 5>;
         };
     };
+    
+    behaviors {
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -77,7 +87,7 @@
                                  &kp A                                                                  &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         num_layer {
@@ -91,7 +101,7 @@
                                               &kp A                                                                   &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>, <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         symbol_layer {

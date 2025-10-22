@@ -71,8 +71,8 @@
             tap-ms = <20>;
         };
         
-        encoder_msc: encoder_msc {
-            compatible = "zmk,behavior-sensor-rotate_var";
+        inc_encoder_msc: inc_encoder_msc {
+            compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <20>;
@@ -93,7 +93,7 @@
                                  &kp A                                                                  &kp B
             >;
 
-            sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_encoder_msc SCRL_UP SCRL_DOWN>;
         };
 
         num_layer {

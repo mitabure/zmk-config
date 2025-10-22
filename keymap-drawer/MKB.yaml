@@ -17,11 +17,11 @@ layers:
   - A
   - S
   - D
-  - F
+  - {t: F, h: Sym}
   - G
   - H
   - J
-  - K
+  - {t: K, h: Sym}
   - L
   - SEMI
   - SINGLE QUOTE
@@ -41,8 +41,8 @@ layers:
   - LGUI
   - LALT
   - {t: LANG2, h: Num}
-  - {t: SPACE, h: Sym}
-  - {t: ENTER, h: Sym}
+  - {t: SPACE, h: Mouse}
+  - {t: ENTER, h: Mouse}
   - {t: LANGUAGE 1, h: Num}
   - MINUS
   - EQUAL
@@ -135,7 +135,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - MINUS
   - UNDER
@@ -159,7 +159,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT
@@ -277,7 +277,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

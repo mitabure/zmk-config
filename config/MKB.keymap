@@ -81,7 +81,7 @@
         encoder_msc_right_left: encoder_msc_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
             tap-ms = <20>;
         };
     };
@@ -93,9 +93,9 @@
             label = "Def";
             bindings = <
 &kp ESCAPE  &kp Q     &kp W      &kp E     &kp R        &kp T            &kp Y        &kp U             &kp I      &kp O      &kp P      &kp BACKSPACE
-&kp TAB     &kp A     &kp S      &kp D     &kp F        &kp G            &kp H        &kp J             &kp K      &kp L      &kp SEMI   &kp SINGLE_QUOTE
+&kp TAB     &kp A     &kp S      &kp D     &lt 2 F      &kp G            &kp H        &kp J             &lt 2 K    &kp L      &kp SEMI   &kp SINGLE_QUOTE
 &kp LSHFT   &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M             &kp COMMA  &kp DOT    &kp SLASH  &kp 0x87
-&kp LCTRL   &kp LGUI  &kp LALT             &lt 1 LANG2  &lt 2 SPACE      &lt 2 ENTER  &lt 1 LANGUAGE_1             &kp MINUS  &kp EQUAL  &kp 0x89
+&kp LCTRL   &kp LGUI  &kp LALT             &lt 1 LANG2  &lt 4 SPACE      &lt 4 ENTER  &lt 1 LANGUAGE_1             &kp MINUS  &kp EQUAL  &kp 0x89
 &kp LEFT    &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                  &kp HOME          &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                                  &kp A                                                                  &kp B
             >;
@@ -170,7 +170,7 @@
                                                  &kp A                                                       &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&encoder_msc_right_left>;
         };
 
         bt_layer {

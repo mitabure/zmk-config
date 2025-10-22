@@ -14,6 +14,7 @@
 #define SCROLL 5
 #define BT 6
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &mt {
     flavor = "balanced";
@@ -49,6 +50,12 @@
             key-positions = <21 22>;
             layers = <0 1 2 3 4>;
         };
+        
+        CMB_TOG_MOUSE_LAYER {
+            bindings = <&mo 4>;
+            key-positions = <44 45>;
+            layers = <0 1 2 3 4>;
+        };
 
         CMB_MO_FUNC_LAYER_R {
             bindings = <&mo 3>;
@@ -64,17 +71,17 @@
     };
     
     behaviors {
-        encoder_msc_down_up: encoder_msc_down_up {
+        encoder_msc_up_down: encoder_msc_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <20>;
         };
         
-        inc_encoder_msc: inc_encoder_msc {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+        encoder_msc_right_left: encoder_msc_right_left {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
             tap-ms = <20>;
         };
     };
@@ -93,7 +100,7 @@
                                  &kp A                                                                  &kp B
             >;
 
-            sensor-bindings = <&inc_encoder_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&encoder_msc_up_down>;
         };
 
         num_layer {

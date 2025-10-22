@@ -281,8 +281,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
   - UP
   - SPACE
@@ -427,7 +427,7 @@ combos:
   k: Scr
   l: [Def, Num, Sym, Func, Mouse]
 - p: [44, 45]
-  k: Mouse
+  k: {t: Mouse, h: toggle}
   l: [Def, Num, Sym, Func, Mouse]
 - p: [31, 32]
   k: Func

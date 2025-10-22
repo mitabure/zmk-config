@@ -52,7 +52,7 @@
         };
         
         CMB_TOG_MOUSE_LAYER {
-            bindings = <&mo 4>;
+            bindings = <&tog 4>;
             key-positions = <44 45>;
             layers = <0 1 2 3 4>;
         };

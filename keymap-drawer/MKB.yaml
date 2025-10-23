@@ -16,8 +16,8 @@ layers:
   - TAB
   - A
   - S
-  - D
-  - {t: F, h: Sym}
+  - {t: D, h: Sym}
+  - F
   - G
   - H
   - J
@@ -85,8 +85,8 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - ASTERISK
-  - LEFT PARENTHESIS
+  - RIGHT BRACKET
+  - BACKSLASH
   - RIGHT BRACE
   - PIPE
   - {t: ▽, type: trans}
@@ -134,8 +134,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - MINUS
   - UNDER
@@ -144,8 +144,8 @@ layers:
   - '0x89'
   - Sft+0x89
   - {t: ▽, type: trans}
-  - ASTERISK
-  - LEFT PARENTHESIS
+  - RIGHT BRACKET
+  - BACKSLASH
   - RIGHT BRACE
   - PIPE
   - {t: ▽, type: trans}

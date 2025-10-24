@@ -53,7 +53,7 @@
         
         CMB_TOG_MOUSE_LAYER {
             bindings = <&tog 4>;
-            key-positions = <44 45>;
+            key-positions = <22 23>;
             layers = <0 1 2 3 4>;
         };
 
@@ -149,8 +149,8 @@
             label = "Mouse";
             bindings = <
 &trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB4   &mkp MB5   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB1   &mkp MB3   &mkp MB2   &trans
+&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB1   &mkp MB2   &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB3   &trans     &trans     &trans
 &trans    &trans  &trans               &trans     &trans       &trans  &trans               &trans     &trans     &trans
 &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                       &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                              &kp A                                               &kp B
@@ -163,8 +163,8 @@
             label = "Scr";
             bindings = <
 &none             &none         &kp LS(LC(TAB))  &none         &kp LC(TAB)  &kp PSCRN       &none  &none     &none      &none      &none      &none
-&kp TAB           &none         &none            &kp UP_ARROW  &none        &kp K_MUTE      &none  &none     &none      &none      &none      &none
-&kp LEFT_SHIFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &none  &none     &mkp MB1   &mkp MB3   &mkp MB2   &none
+&kp TAB           &none         &none            &kp UP_ARROW  &none        &kp K_MUTE      &none  &none     &mkp MB1   &mkp MB2   &none      &none
+&kp LEFT_SHIFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &none  &none     &mkp MB3   &trans     &trans     &none
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT                   &none        &none           &none  &none                &none      &none      &none
 &kp LEFT          &kp UP        &kp SPACE        &kp DOWN      &kp RIGHT                           &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                                                  &kp A                                                       &kp B

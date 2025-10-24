@@ -413,10 +413,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="840" y="84" class="combo tap layer-activator">Scr</text>
 </a></g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="882" y="183" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="882" y="71" width="28" height="26" class="combo"/>
 <a href="#Mouse">
-<text x="896" y="196" class="combo tap layer-activator">Mouse</text>
-</a><text x="896" y="207" class="combo hold">toggle</text>
+<text x="896" y="84" class="combo tap layer-activator">Mouse</text>
+</a><text x="896" y="95" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="714" y="127" width="28" height="26" class="combo"/>
@@ -687,10 +687,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="840" y="84" class="combo tap layer-activator">Scr</text>
 </a></g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="882" y="183" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="882" y="71" width="28" height="26" class="combo"/>
 <a href="#Mouse">
-<text x="896" y="196" class="combo tap layer-activator">Mouse</text>
-</a><text x="896" y="207" class="combo hold">toggle</text>
+<text x="896" y="84" class="combo tap layer-activator">Mouse</text>
+</a><text x="896" y="95" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="714" y="127" width="28" height="26" class="combo"/>
@@ -968,10 +968,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="840" y="84" class="combo tap layer-activator">Scr</text>
 </a></g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="882" y="183" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="882" y="71" width="28" height="26" class="combo"/>
 <a href="#Mouse">
-<text x="896" y="196" class="combo tap layer-activator">Mouse</text>
-</a><text x="896" y="207" class="combo hold">toggle</text>
+<text x="896" y="84" class="combo tap layer-activator">Mouse</text>
+</a><text x="896" y="95" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="714" y="127" width="28" height="26" class="combo"/>
@@ -1215,10 +1215,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="840" y="84" class="combo tap layer-activator">Scr</text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="882" y="183" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="882" y="71" width="28" height="26" class="combo"/>
 <a href="#Mouse">
-<text x="896" y="196" class="combo tap layer-activator">Mouse</text>
-</a><text x="896" y="207" class="combo hold">toggle</text>
+<text x="896" y="84" class="combo tap layer-activator">Mouse</text>
+</a><text x="896" y="95" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1308,13 +1308,13 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(756, 84)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB4</tspan>
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
 </text>
 </g>
 <g transform="translate(812, 84)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB5</tspan>
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
 </text>
 </g>
 <g transform="translate(868, 84)" class="key trans keypos-22">
@@ -1360,20 +1360,16 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(756, 140)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
-</text>
-</g>
-<g transform="translate(812, 140)" class="key keypos-33">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB3</tspan>
 </text>
 </g>
-<g transform="translate(868, 140)" class="key keypos-34">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
-</text>
+<g transform="translate(812, 140)" class="key trans keypos-33">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g transform="translate(868, 140)" class="key trans keypos-34">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(924, 140)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -1476,10 +1472,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="840" y="84" class="combo tap layer-activator">Scr</text>
 </a></g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="882" y="183" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="882" y="71" width="28" height="26" class="combo"/>
 <a href="#Mouse">
-<text x="896" y="196" class="combo tap layer-activator">Mouse</text>
-</a><text x="896" y="207" class="combo hold">toggle</text>
+<text x="896" y="84" class="combo tap layer-activator">Mouse</text>
+</a><text x="896" y="95" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="714" y="127" width="28" height="26" class="combo"/>
@@ -1568,9 +1564,15 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(756, 84)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
+</text>
 </g>
 <g transform="translate(812, 84)" class="key held keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
+<text x="0" y="0" class="key held tap">
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
+</text>
 </g>
 <g transform="translate(868, 84)" class="key held keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
@@ -1611,20 +1613,16 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(756, 140)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
-</text>
-</g>
-<g transform="translate(812, 140)" class="key keypos-33">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB3</tspan>
 </text>
 </g>
-<g transform="translate(868, 140)" class="key keypos-34">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
-</text>
+<g transform="translate(812, 140)" class="key trans keypos-33">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g transform="translate(868, 140)" class="key trans keypos-34">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(924, 140)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

@@ -68,9 +68,10 @@
             layers = <0 1 2 4 5>;
         };
 
-        input_c_cpp {
-            bindings = <&c_cpp>;
+        CMB_INPUT_C_CPP {
+            bindings = <&input_c_cpp>;
             key-positions = <27 22>;
+            layers = <0>;
         };
     };
 
@@ -93,10 +94,10 @@
     };
 
     macros {
-        c_cpp: new_macro {
+        input_c_cpp: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(C) &kp FSLH &kp LS(C) &kp PLUS &kp PLUS>;
+            bindings = <&kp LS(C) &kp FSLH &kp LS(C) &kp LS(SEMI) &kp LS(SEMI)>;
             label = "NEW_MACRO";
         };
     };
@@ -165,10 +166,10 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mkp MB1   &mkp MB2   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mkp MB3   &trans     &trans     &trans
-&trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &none      &none      &none      &none
+&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB1   &mkp MB2   &none      &none
+&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB3   &none      &none      &none
+&trans    &trans  &trans               &trans     &trans      &trans  &trans               &none      &none      &none
 &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                              &kp A                                              &kp B
             >;
@@ -181,7 +182,7 @@
             bindings = <
 &none             &none         &kp LS(LC(TAB))  &none         &kp LC(TAB)  &kp PSCRN       &none  &none     &none      &none      &none      &none
 &kp TAB           &none         &none            &kp UP_ARROW  &none        &kp K_MUTE      &none  &none     &mkp MB1   &mkp MB2   &none      &none
-&kp LEFT_SHIFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &none  &none     &mkp MB3   &trans     &trans     &none
+&kp LEFT_SHIFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &none  &none     &mkp MB3   &none      &none      &none
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT                   &none        &none           &none  &none                &none      &none      &none
 &kp LEFT          &kp UP        &kp SPACE        &kp DOWN      &kp RIGHT                           &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                                                  &kp A                                                       &kp B

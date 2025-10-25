@@ -13,7 +13,6 @@
 #define MOUSE 4
 #define SCROLL 5
 #define BT 6
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &mt {
@@ -50,7 +49,7 @@
             key-positions = <21 22>;
             layers = <0 1 2 3 4>;
         };
-        
+
         CMB_TOG_MOUSE_LAYER {
             bindings = <&tog 4>;
             key-positions = <22 23>;
@@ -68,21 +67,37 @@
             key-positions = <27 28>;
             layers = <0 1 2 4 5>;
         };
+
+        input_c_cpp {
+            bindings = <&c_cpp>;
+            key-positions = <27 22>;
+        };
     };
-    
+
     behaviors {
         encoder_msc_up_down: encoder_msc_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
-        
+
         encoder_msc_right_left: encoder_msc_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+
             tap-ms = <20>;
+        };
+    };
+
+    macros {
+        c_cpp: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp FSLH &kp LS(C) &kp PLUS &kp PLUS>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -106,12 +121,12 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp CAPS  &kp N1             &kp N2         &kp N3           &kp N4      &kp N5          &kp N6      &kp N7         &kp N8        &kp N9                &kp N0     &kp BACKSPACE
-&trans    &kp LS(N1)         &kp AT         &kp LS(N3)       &kp LS(N4)  &kp LS(N5)      &kp CARET   &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &none      &none
-&trans    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACE  &kp PIPE    &trans          &trans      &trans         &kp COMMA     &kp DOT               &kp UP     &none
-&trans    &trans             &trans                          &trans      &trans          &trans      &trans                       &kp LEFT              &kp DOWN   &kp RIGHT
-&kp LEFT  &kp UP             &kp SPACE      &kp DOWN         &kp RIGHT                               &kp HOME       &kp PG_UP     &kp ENTER             &kp PG_DN  &kp END
-                                              &kp A                                                                   &kp B
+&kp CAPS  &kp N1             &kp N2         &kp N3           &kp N4      &kp N5          &kp N6     &kp N7         &kp N8        &kp N9                &kp N0     &kp BACKSPACE
+&trans    &kp LS(N1)         &kp AT         &kp LS(N3)       &kp LS(N4)  &kp LS(N5)      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &none      &none
+&trans    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACE  &kp PIPE    &trans          &trans     &trans         &kp COMMA     &kp DOT               &kp UP     &none
+&trans    &trans             &trans                          &trans      &trans          &trans     &trans                       &kp LEFT              &kp DOWN   &kp RIGHT
+&kp LEFT  &kp UP             &kp SPACE      &kp DOWN         &kp RIGHT                              &kp HOME       &kp PG_UP     &kp ENTER             &kp PG_DN  &kp END
+                                            &kp A                                                                  &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
@@ -124,22 +139,24 @@
 &trans    &trans             &trans         &trans           &trans     &trans      &kp MINUS  &kp UNDER  &kp EQUAL  &kp PLUS          &kp 0x89        &kp LS(0x89)
 &trans    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACE  &kp PIPE   &trans      &trans     &trans     &trans     &trans            &kp UP          &trans
 &trans    &trans             &trans                          &trans     &trans      &trans     &trans                &kp LEFT          &kp DOWN        &kp RIGHT
-&kp LEFT  &kp UP        &kp SPACE           &kp DOWN         &kp RIGHT                         &kp HOME   &kp PG_UP  &kp RETURN        &kp PG_DN       &kp END
-                                             &trans                                                        &trans
+&kp LEFT  &kp UP             &kp SPACE      &kp DOWN         &kp RIGHT                         &kp HOME   &kp PG_UP  &kp RETURN        &kp PG_DN       &kp END
+                                            &trans                                                        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>, <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp PG_UP PG_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         function_layer {
             label = "Func";
             bindings = <
-&none        &none         &kp LS(LC(TAB))  &none         &kp LC(TAB)  &kp PSCRN       &kp F1    &kp F2     &kp F3      &kp F4      &kp F5      &none
-&kp TAB      &none         &none            &kp UP        &none        &kp K_MUTE      &kp F6    &kp F7     &kp F8      &kp F9      &kp F10     &none
-&kp LSHFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &kp F11   &kp F12    &none       &none       &none       &none
-&kp LCTRL    &kp LGUI      &kp LALT                       &trans       &trans          &trans    &trans                 &none       &none       &none
-&kp LEFT     &kp UP        &kp SPACE        &kp DOWN      &kp RIGHT                              &kp HOME   &kp PG_UP   &kp ENTER   &kp PG_DN   &kp END
-                                            &kp A                                                           &kp B
+&none      &none     &kp LS(LC(TAB))  &none     &kp LC(TAB)  &kp PSCRN       &kp F1   &kp F2    &kp F3     &kp F4     &kp F5     &none
+&kp TAB    &none     &none            &kp UP    &none        &kp K_MUTE      &kp F6   &kp F7    &kp F8     &kp F9     &kp F10    &none
+&kp LSHFT  &none     &kp LEFT         &kp DOWN  &kp RIGHT    &none           &kp F11  &kp F12   &none      &none      &none      &none
+&kp LCTRL  &kp LGUI  &kp LALT                   &trans       &trans          &trans   &trans               &none      &none      &none
+&kp LEFT   &kp UP    &kp SPACE        &kp DOWN  &kp RIGHT                             &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                      &kp A                                                     &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>, <&inc_dec_kp PG_UP PG_DN>;
@@ -148,12 +165,12 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB1   &mkp MB2   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans       &trans  &trans    &mkp MB3   &trans     &trans     &trans
-&trans    &trans  &trans               &trans     &trans       &trans  &trans               &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                       &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                               &kp B
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mkp MB1   &mkp MB2   &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &mkp MB3   &trans     &trans     &trans
+&trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                             &kp A                                              &kp B
             >;
 
             sensor-bindings = <&encoder_msc_up_down>;

@@ -166,7 +166,7 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &none      &none      &none      &none
+&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &none      &none      &none      &kp BACKSPACE
 &trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB1   &mkp MB2   &none      &none
 &trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB3   &none      &none      &none
 &trans    &trans  &trans               &trans     &trans      &trans  &trans               &none      &none      &none
@@ -180,7 +180,7 @@
         scroll_layer {
             label = "Scr";
             bindings = <
-&none             &none         &kp LS(LC(TAB))  &none         &kp LC(TAB)  &kp PSCRN       &none  &none     &none      &none      &none      &none
+&none             &none         &kp LS(LC(TAB))  &none         &kp LC(TAB)  &kp PSCRN       &none  &none     &none      &none      &none      &kp BACKSPACE
 &kp TAB           &none         &none            &kp UP_ARROW  &none        &kp K_MUTE      &none  &none     &mkp MB1   &mkp MB2   &none      &none
 &kp LEFT_SHIFT    &none         &kp LEFT         &kp DOWN      &kp RIGHT    &none           &none  &none     &mkp MB3   &none      &none      &none
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT                   &none        &none           &none  &none                &none      &none      &none

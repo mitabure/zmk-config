@@ -248,7 +248,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -307,7 +307,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - BACKSPACE
   - TAB
   - ''
   - ''

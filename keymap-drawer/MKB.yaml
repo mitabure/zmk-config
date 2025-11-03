@@ -40,10 +40,10 @@ layers:
   - LCTRL
   - LGUI
   - LALT
-  - {t: LANG2, h: Num}
   - {t: SPACE, h: Mouse}
+  - {t: LANG2, h: Num}
+  - {t: LANG1, h: Num}
   - {t: ENTER, h: Mouse}
-  - {t: LANGUAGE 1, h: Num}
   - MINUS
   - EQUAL
   - '0x89'
@@ -99,8 +99,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT
@@ -270,14 +270,14 @@ layers:
   - ''
   - ''
   - '&mkp MB3'
+  - '&mkp MB4'
+  - '&mkp MB5'
   - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''

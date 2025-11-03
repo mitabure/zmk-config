@@ -97,7 +97,7 @@
         input_c_cpp: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(C) &kp FSLH &kp LS(C) &kp LS(SEMI) &kp LS(SEMI)>;
+            bindings = <&kp LANG2 &kp LS(C) &kp FSLH &kp LS(C) &kp LS(SEMI) &kp LS(SEMI)>;
             label = "NEW_MACRO";
         };
     };

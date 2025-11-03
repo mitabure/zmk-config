@@ -108,12 +108,12 @@
         default_layer {
             label = "Def";
             bindings = <
-&kp ESCAPE  &kp Q     &kp W      &kp E     &kp R        &kp T            &kp Y        &kp U             &kp I      &kp O      &kp P      &kp BACKSPACE
-&kp TAB     &kp A     &kp S      &lt 2 D   &kp F        &kp G            &kp H        &kp J             &lt 2 K    &kp L      &kp SEMI   &kp SINGLE_QUOTE
-&kp LSHFT   &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M             &kp COMMA  &kp DOT    &kp SLASH  &kp 0x87
-&kp LCTRL   &kp LGUI  &kp LALT             &lt 1 LANG2  &lt 4 SPACE      &lt 4 ENTER  &lt 1 LANGUAGE_1             &kp MINUS  &kp EQUAL  &kp 0x89
-&kp LEFT    &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                  &kp HOME          &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                 &kp A                                                                  &kp B
+&kp ESCAPE  &kp Q     &kp W      &kp E     &kp R        &kp T            &kp Y        &kp U        &kp I      &kp O      &kp P      &kp BACKSPACE
+&kp TAB     &kp A     &kp S      &lt 2 D   &kp F        &kp G            &kp H        &kp J        &lt 2 K    &kp L      &kp SEMI   &kp SINGLE_QUOTE
+&kp LSHFT   &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M        &kp COMMA  &kp DOT    &kp SLASH  &kp 0x87
+&kp LCTRL   &kp LGUI  &kp LALT             &lt 4 SPACE  &lt 1 LANG2      &lt 1 LANG1  &lt 4 ENTER             &kp MINUS  &kp EQUAL  &kp 0x89
+&kp LEFT    &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                  &kp HOME     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                 &kp A                                                             &kp B
             >;
 
             sensor-bindings = <&encoder_msc_up_down>;
@@ -168,7 +168,7 @@
             bindings = <
 &trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &none      &none      &none      &kp BACKSPACE
 &trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB1   &mkp MB2   &none      &none
-&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB3   &none      &none      &none
+&trans    &trans  &trans     &trans    &trans     &trans      &none   &none     &mkp MB3   &mkp MB4   &mkp MB5   &none
 &trans    &trans  &trans               &trans     &trans      &trans  &trans               &none      &none      &none
 &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                              &kp A                                              &kp B

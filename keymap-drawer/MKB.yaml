@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: MKB}
 layers:
   Def:
-  - ESCAPE
+  - GRAVE
   - Q
   - W
   - E
@@ -36,17 +36,17 @@ layers:
   - COMMA
   - DOT
   - SLASH
-  - '0x87'
+  - {t: '0x87', h: RSHFT}
   - LCTRL
   - LGUI
   - LALT
   - {t: SPACE, h: Mouse}
-  - {t: LANG2, h: Num}
-  - {t: LANG1, h: Num}
+  - {t: SPACE, h: Num}
+  - {t: ENTER, h: Num}
   - {t: ENTER, h: Mouse}
   - MINUS
   - EQUAL
-  - '0x89'
+  - {t: '0x89', h: RCTRL}
   - LEFT
   - UP
   - SPACE
@@ -437,4 +437,7 @@ combos:
   l: [Def, Num, Sym, Mouse, Scr]
 - p: [27, 22]
   k: '&input_c_cpp'
+  l: [Def]
+- p: [0, 1]
+  k: ESCAPE
   l: [Def]

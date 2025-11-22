@@ -193,7 +193,7 @@ layers:
   - {t: ▽, type: trans}
   - VOLUME UP
   - ''
-  - Sft+LALT
+  - Alt+TAB
   - LEFT
   - RIGHT
   - '&msc SCRL_DOWN'

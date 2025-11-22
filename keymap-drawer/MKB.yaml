@@ -193,9 +193,9 @@ layers:
   - {t: ▽, type: trans}
   - VOLUME UP
   - ''
-  - Alt+Sft+TAB
-  - Alt+TAB
-  - ''
+  - Sft+LALT
+  - LEFT
+  - RIGHT
   - '&msc SCRL_DOWN'
   - ''
   - '&mkp MB1'
@@ -205,8 +205,8 @@ layers:
   - {t: ▽, type: trans}
   - VOLUME DOWN
   - ''
-  - ''
-  - ''
+  - Sft+Gui+LEFT
+  - Sft+Gui+RIGHT
   - ''
   - '&msc SCRL_LEFT'
   - '&msc SCRL_RIGHT'

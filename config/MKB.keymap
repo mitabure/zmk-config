@@ -61,6 +61,12 @@
             key-positions = <0 1>;
             layers = <0>;
         };
+
+        CMB_CAPSLOCK {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <12 13>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -110,7 +116,7 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp CAPS  &kp N1             &kp N2         &kp N3           &kp N4     &kp N5       &kp N6   &kp N7    &kp N8     &kp N9     &kp N0    &kp BACKSPACE
+&trans    &kp N1             &kp N2         &kp N3           &kp N4     &kp N5       &kp N6   &kp N7    &kp N8     &kp N9     &kp N0    &kp BACKSPACE
 &trans    &kp F1             &kp F2         &kp F3           &kp F4     &kp F5       &kp F6   &kp F7    &kp F8     &kp F9     &kp F10   &none
 &trans    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACE  &kp PIPE   &kp F11      &kp F12  &none     &kp COMMA  &kp DOT    &kp UP    &none
 &trans    &trans             &trans                          &trans     &trans       &trans   &trans               &kp LEFT   &kp DOWN  &kp RIGHT
@@ -124,12 +130,12 @@
         symbol_layer {
             label = "Sym";
             bindings = <
-&kp GRAVE  &kp LS(N1)         &kp AT         &kp LS(N3)        &kp LS(N4)      &kp LS(N5)      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &none      &kp BACKSPACE
-&trans     &none              &none          &kp LEFT_BRACKET  &kp LEFT_BRACE  &none           &kp MINUS  &kp UNDER      &kp EQUAL     &kp PLUS              &kp 0x89   &kp LS(0x89)
-&trans     &kp RIGHT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACE   &kp PIPE        &none           &none      &none          &none         &none                 &kp UP     &none
-&trans     &trans             &trans                           &trans          &trans          &trans     &trans                       &kp LEFT              &kp DOWN   &kp RIGHT
-&kp LEFT   &kp UP             &kp SPACE      &kp DOWN          &kp RIGHT                                  &kp HOME       &kp PG_UP     &kp RETURN            &kp PG_DN  &kp END
-                                             &trans                                                                      &trans
+&trans    &kp LS(N1)         &kp AT         &kp LS(N3)        &kp LS(N4)      &kp LS(N5)      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &none      &kp BACKSPACE
+&trans    &none              &none          &kp LEFT_BRACKET  &kp LEFT_BRACE  &none           &kp MINUS  &kp UNDER      &kp EQUAL     &kp PLUS              &kp 0x89   &kp LS(0x89)
+&trans    &kp RIGHT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACE   &kp PIPE        &none           &none      &none          &none         &none                 &kp UP     &none
+&trans    &trans             &trans                           &trans          &trans          &trans     &trans                       &kp LEFT              &kp DOWN   &kp RIGHT
+&kp LEFT  &kp UP             &kp SPACE      &kp DOWN          &kp RIGHT                                  &kp HOME       &kp PG_UP     &kp RETURN            &kp PG_DN  &kp END
+                                            &trans                                                                      &trans
             >;
 
             sensor-bindings =

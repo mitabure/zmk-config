@@ -192,10 +192,10 @@ layers:
   - BACKSPACE
   - {t: ▽, type: trans}
   - VOLUME UP
+  - LALT
+  - Sft+TAB
+  - TAB
   - ''
-  - Alt+TAB
-  - LEFT
-  - RIGHT
   - '&msc SCRL_DOWN'
   - ''
   - '&mkp MB1'

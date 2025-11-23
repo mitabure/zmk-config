@@ -147,7 +147,7 @@
             label = "Mouse";
             bindings = <
 &none     &kp K_MUTE         &none      &kp LS(LC(TAB))   &kp LC(TAB)        &kp PRINTSCREEN      &msc SCRL_UP    &none            &mkp MB4   &mkp MB5   &none      &kp BACKSPACE
-&trans    &kp K_VOLUME_UP    &none      &kp LA(TAB)       &kp LEFT           &kp RIGHT            &msc SCRL_DOWN  &none            &mkp MB1   &mkp MB2   &mo 1      &none
+&trans    &kp K_VOLUME_UP    &kp LALT   &kp LS(TAB)       &kp TAB            &none                &msc SCRL_DOWN  &none            &mkp MB1   &mkp MB2   &mo 1      &none
 &trans    &kp K_VOLUME_DOWN  &none      &kp LS(LG(LEFT))  &kp LS(LG(RIGHT))  &none                &msc SCRL_LEFT  &msc SCRL_RIGHT  &mkp MB3   &none      &kp UP     &none
 &trans    &trans             &trans                       &none              &none                &none           &none                       &kp LEFT   &kp DOWN   &kp RIGHT
 &kp LEFT  &kp UP             &kp SPACE  &kp DOWN          &kp RIGHT                                               &kp HOME         &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
